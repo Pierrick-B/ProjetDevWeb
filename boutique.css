@@ -1,0 +1,69 @@
+/* consignes https://github.com/melpiro/ProjetDevWeb */
+
+body {
+    --background: rgb(138, 33, 33);
+    --button_color: rgb(141, 141, 240);
+    --button_hover_color: white;
+
+    margin: 0;
+}
+
+header {
+    background-color: var(--background);
+
+}
+
+.logo {
+    display: flex;
+    position: fixed;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    background-color: var(--button_color);
+    border: solid black 1px;
+    border-radius: 15%;
+    font-weight: bold;
+
+
+    height: 60%;
+}
+
+button:hover {
+    background-color: var(--button_hover_color);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+section {
+    border: solid 3px black;
+}
+
+.parametres {
+    width: 25%;
+}
+
+.parametres>div {
+    border: solid 3px green;
+}
+
+.espace_vente {
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+
+.article {
+    border: solid 2px red;
+    width: 30%;
+    height: 50px;
+}
