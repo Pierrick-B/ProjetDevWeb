@@ -9,4 +9,6 @@
 
 *Nom2 et Nom3 ont travaillé ensemble sur le header/footer*
 
-**Lien du site (hébergé sur github) :** https://github.io/ProjetDevWeb/index.html
+**Lien du site (hébergé sur github) :** 
+
+[Site web]([https://laura1726.github.io/SAE/](https://github.com/Pierrick-B/ProjetDevWeb))
