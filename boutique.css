@@ -3,6 +3,7 @@
 body {
     --black: black;
     --heigth_header: 40px;
+    --heigth_header_media: 150px;
     --background: #B4D35B;
     --button_color: rgb(141, 141, 240);
     --button_hover_color: white;
@@ -47,31 +48,30 @@ main {
     flex-direction: row;
 }
 
-section {
-    border: solid 3px black;
-}
-
 
 .parametres {
     margin-top: var(--heigth_header);
     position: fixed;
     width: 25%;
+    height: 100%;
+    background-color: var(--button_color);
+
 }
 
 .parametres>div {
     border: solid 3px green;
 }
 
-/* input[type="checkbox"] {
+input[type="checkbox"] {
     display: none;
-} */
+}
 
 label {
     color: var(--star_color);
 }
 
 input[type="checkbox"]:checked+label {
-
+    transition: 0.25s;
     color: var(--black);
     user-select: none;
 
@@ -82,20 +82,21 @@ input[type="checkbox"]:checked+label {
 }
 
 .espace_vente {
-    border: solid 3px black;
     margin-top: var(--heigth_header);
+    margin-bottom: 20%;
     margin-left: 25%;
     width: 75%;
     flex-wrap: wrap;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 15px;
+    gap: 2%;
 }
 
 .article {
     border: solid 2px red;
     width: 50%;
+    height: 20%;
     display: flex;
     flex-direction: row;
 }
@@ -104,30 +105,21 @@ input[type="checkbox"]:checked+label {
     flex-direction: row-reverse;
 }
 
-/* .article:hover::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.664);
-} */
-
 .article>img {
     width: 100%;
 }
 
 .article:hover {
 
+    transition: 0.25s;
     width: 95%;
-    height: 20%;
 
     >img {
         width: 50%;
-        object-fit: contain;
     }
 
     .caracteristiques {
-        border: solid 2px purple;
+        background-color: brown;
     }
 
     .caracteristiques span,
@@ -141,12 +133,15 @@ input[type="checkbox"]:checked+label {
         align-items: center;
         flex-direction: column;
         color: var(--star_color);
-        align-self: flex-end;
+    }
+
+    .avis>div {
+        margin: 5%;
     }
 
     .avis img {
         display: inline-block;
-        height: 20px;
+        height: 25px;
     }
 }
 
@@ -166,7 +161,62 @@ input[type="checkbox"]:checked+label {
     display: none;
 }
 
-@media (max-width:600px) {}
+footer {
+    height: 80px;
+    background-color: var(--background);
+    position: sticky;
+}
+
+@media (max-width:1000px) {
+
+    header {
+        position: absolute;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    main {
+        flex-direction: row;
+    }
+
+    .parametres {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: var(--heigth_header_media);
+    }
+
+    .type {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .espace_vente {
+        margin-top: var(--heigth_header_media);
+        margin-left: 0px;
+        width: 100%;
+    }
+}
+
+/* @media (min-width:1200px) {
+    .article {
+        width: 40%;
+        height: 35%;
+        object-fit: cover;
+    }
+
+    .article:hover {
+        width: 40%;
+        flex-direction: column;
+        height: 50%;
+
+    }
+} */
 
 /*
 cd /c/Users/Public/BUT_Info/Github/ProjetDevWeb

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boutique de plaques</title>
-    <link rel="stylesheet" href="boutique.css">
+    <link rel="stylesheet" href="boutique_test.css">
 </head>
 
 <body>
@@ -25,16 +25,16 @@
             <div class="type">
                 <h1>Matière</h1>
                 <div>
-                    <input type="checkbox" name="note" id="note">
-                    <label for="matiere">Aluminium</label>
+                    <input type="checkbox" name="matiere" id="aluminium">
+                    <label for="aluminium">Aluminium</label>
                 </div>
                 <div>
                     <input type="checkbox" name="matiere" id="inox">
-                    <label for="matiere">Acier inoxydable</label>
+                    <label for="inox">Acier inoxydable</label>
                 </div>
                 <div>
                     <input type="checkbox" name="matiere" id="bois">
-                    <label for="matiere">Bois</label>
+                    <label for="bois">Bois</label>
                 </div>
             </div>
 
@@ -42,11 +42,11 @@
                 <h1>Forme</h1>
                 <div>
                     <input type="checkbox" name="forme" id="arrondie">
-                    <label for="forme">Arrondie</label>
+                    <label for="arrondie">Arrondie</label>
                 </div>
                 <div>
                     <input type="checkbox" name="forme" id="carree">
-                    <label for="forme">Carrée</label>
+                    <label for="carree">Carrée</label>
                 </div>
             </div>
 
@@ -57,9 +57,9 @@
                 <img src="https://sc04.alicdn.com/kf/HTB1_oy6aEzrK1RjSspmq6AOdFXaa.jpg" />
                 <div class="caracteristiques">
                     <div>
-                        <span>Nom Article</span>
+                        <span class="nom">Plaque Ronde Inox</span>
                         <br />
-                        <span>Prix</span>
+                        <span class="prix">112,00€</span>
                     </div>
                     <div class="avis">
                         <div>
@@ -70,7 +70,10 @@
                             <img src="img/half_star.png" />
                         </div>
                         <div>
-                            <span>Ma ville s'est demarquée grâce à l'option de personnalisation</span>
+                            <span type=strong>Commentaire :</span>
+                            <br />
+                            <span>Robuste mais très lourd. Attention à vos pieds lors de la pose (je conseille les
+                                S24 Matrix EVO S3 SRC pour tous les amoureux de canalisations).</span>
                         </div>
                     </div>
                 </div>
@@ -81,9 +84,9 @@
                 <img src="https://www.pointp.fr/asset/51/34/AST2155134-XL.jpg" />
                 <div class="caracteristiques">
                     <div>
-                        <span>Nom Article</span>
+                        <span class="nom">Plaque Carrée Inox</span>
                         <br />
-                        <span>Prix</span>
+                        <span class="prix">112,00€</span>
                     </div>
                     <div class="avis">
                         <div>
@@ -94,7 +97,10 @@
                             <img src="img/half_star.png" />
                         </div>
                         <div>
-                            <span>Ma ville s'est demarquée grâce à l'option de personnalisation</span>
+                            <span type=strong>Commentaire :</span>
+                            <br />
+                            <span>Une classique qui a su se démarquer et régner en tête des classements. Une grande
+                                incontournable de sa catégorie. Vous ne serez pas déçu !</span>
                         </div>
                     </div>
                 </div>
@@ -103,16 +109,84 @@
             <div class="article">
                 <img
                     src="https://as1.ftcdn.net/v2/jpg/01/07/34/98/1000_F_107349874_1FDfkrLWqGKcVypJlcPF79bcNn8HfhLX.jpg" />
+                <div class="caracteristiques">
+                    <div>
+                        <span class="nom">Plaque Carrée Bois</span>
+                        <br />
+                        <span class="prix">112,00€</span>
+                    </div>
+                    <div class="avis">
+                        <div>
+                            <img src="img/star.png" />
+                            <img src="img/star.png" />
+                            <img src="img/half_star.png" />
+                            <img src="img/empty_star.png" />
+                            <img src="img/empty_star.png" />
+                        </div>
+                        <div>
+                            <span type=strong>Commentaire :</span>
+                            <br />
+                            <span>Un plaisir pour les yeux, moins pour le nez car la plaque est
+                                peu hermétique aux odeurs. Je recommande aux anosmiques !</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="article">
                 <img src="https://m.media-amazon.com/images/I/41f+-taeE7L._AC_.jpg" />
+                <div class="caracteristiques">
+                    <div>
+                        <span class="nom">Plaque Carrée Aluminium</span>
+                        <br />
+                        <span class="prix">112,00€</span>
+                    </div>
+                    <div class="avis">
+                        <div>
+                            <img src="img/star.png" />
+                            <img src="img/star.png" />
+                            <img src="img/star.png" />
+                            <img src="img/star.png" />
+                            <img src="img/half_star.png" />
+                        </div>
+                        <div>
+                            <span type=strong>Commentaire :</span>
+                            <br />
+                            <span>Multi-usages ! Testée et approuvée en plaque d'égout, porte de placard ainsi que
+                                trappe pour le grenier. Vous lui trouverez une utilité !
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="article">
                 <img
                     src="https://www.picclickimg.com/WuEAAOSwQIFlcZm-/Plaque-D%C3%89gout-Rond-Alu-Riffelblech-15-2-25-4-35-5-5-65.webp" />
+                <div class="caracteristiques">
+                    <div>
+                        <span class="nom">Plaque Ronde Inox</span>
+                        <br />
+                        <span class="prix">112,00€</span>
+                    </div>
+                    <div class="avis">
+                        <div>
+                            <img src="img/star.png" />
+                            <img src="img/star.png" />
+                            <img src="img/star.png" />
+                            <img src="img/star.png" />
+                            <img src="img/half_star.png" />
+                        </div>
+                        <div>
+                            <span type=strong>Commentaire :</span>
+                            <br />
+                            <span>Léger, maniable et fiable, on ne peux rien reprocher. Même en ultimate cette plaque
+                                répond à toutes nos attentes.</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+
 
         </section>
 
