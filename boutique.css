@@ -1,16 +1,21 @@
 /* consignes https://github.com/melpiro/ProjetDevWeb */
 
 body {
-    --background: #EAB543;
+    --black: black;
+    --heigth_header: 40px;
+    --background: #B4D35B;
     --button_color: rgb(141, 141, 240);
     --button_hover_color: white;
+    --star_color: #F19E39;
 
     margin: 0;
 }
 
 header {
     background-color: var(--background);
-
+    position: fixed;
+    width: 100%;
+    height: var(--heigth_header);
 }
 
 .logo {
@@ -46,7 +51,10 @@ section {
     border: solid 3px black;
 }
 
+
 .parametres {
+    margin-top: var(--heigth_header);
+    position: fixed;
     width: 25%;
 }
 
@@ -54,7 +62,29 @@ section {
     border: solid 3px green;
 }
 
+/* input[type="checkbox"] {
+    display: none;
+} */
+
+label {
+    color: var(--star_color);
+}
+
+input[type="checkbox"]:checked+label {
+
+    color: var(--black);
+    user-select: none;
+
+}
+
+.type div:hover {
+    background-color: var(--background);
+}
+
 .espace_vente {
+    border: solid 3px black;
+    margin-top: var(--heigth_header);
+    margin-left: 25%;
     width: 75%;
     flex-wrap: wrap;
     display: flex;
@@ -65,34 +95,78 @@ section {
 
 .article {
     border: solid 2px red;
-    width: 40%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
 }
 
-.article:hover {
-
-    width: 60%;
-    align-items: left;
-
-    .avis {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        font-size: 2vw;
-        position: relative;
-        top: 90%;
-        left: 100%;
-        height: 0px;
-        color: var(--background);
-    }
+.article:nth-child(2n) {
+    flex-direction: row-reverse;
 }
+
+/* .article:hover::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.664);
+} */
 
 .article>img {
     width: 100%;
 }
 
-.avis {
-    font-size: 0;
+.article:hover {
+
+    width: 95%;
+    height: 20%;
+
+    >img {
+        width: 50%;
+        object-fit: contain;
+    }
+
+    .caracteristiques {
+        border: solid 2px purple;
+    }
+
+    .caracteristiques span,
+    .avis span {
+        font-size: 2vw;
+    }
+
+
+    .avis {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: var(--star_color);
+        align-self: flex-end;
+    }
+
+    .avis img {
+        display: inline-block;
+        height: 20px;
+    }
 }
+
+.caracteritiques {
+    display: flex;
+    flex-direction: row;
+}
+
+.caracteristiques span,
+.avis span {
+    font-size: 0px;
+}
+
+
+.avis img {
+
+    display: none;
+}
+
+@media (max-width:600px) {}
 
 /*
 cd /c/Users/Public/BUT_Info/Github/ProjetDevWeb
