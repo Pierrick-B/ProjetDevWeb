@@ -11,4 +11,4 @@
 
 **Lien du site (hébergé sur github) :** 
 
-[Site web]((https://github.com/Pierrick-B/ProjetDevWeb))
+[Site web](https://github.com/Pierrick-B/ProjetDevWeb)
