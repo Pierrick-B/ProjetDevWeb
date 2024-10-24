@@ -3,7 +3,7 @@ body {
     --background: rgb(138, 33, 33);
     --button_color: rgb(141, 141, 240);
     --button_hover_color: white;
-    background-image: url("/home/abolleng/villeegouts.jpg");
+    background-image: url("villeegouts.jpg");
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center; 
