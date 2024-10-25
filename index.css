@@ -3,21 +3,26 @@ html, body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
-    --dark: #38302e; 
+    --dark: #38302e;
+    --dark-transparent: rgba(56, 48, 46, 0.95); 
     --sub-dark: #6f6866;
     --sub-sub-dark: #788585; 
     --background: #ccdad1;
     --secondary-transparent: rgba(139, 69, 19, 0.8);
     --secondary: #8b4513;
     --white: #ffffff;
+    --white-transparent: rgba(255, 255, 255, 0.8);
     --beige: #f5f5dc;
     --gray: #9caea9;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: var(--background);
+    background-image: url(villeegouts.jpg);
+    background-position: center center;
+    background-size: cover;
     color: var(--dark);
 }
+
 
 * {
     box-sizing: border-box;
@@ -29,16 +34,13 @@ a {
     transition: color 0.3s ease-in-out;
 }
 
-a:hover {
-    color: var(--secondary);
-}
 
 header {    
-    background-color: var(--dark);
+    background-color: var(--dark-transparent);
     color: var(--white);
     padding: 10px 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -53,11 +55,11 @@ header h1 {
     text-align: center;
     background: linear-gradient(90deg, var(--secondary), var(--beige));
     background-clip: text;
-    background-clip: text;
+    background-size: 150%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 30px;
-    animation: fadeIn 2s ease-in-out, colorChange 5s infinite alternate;
+    animation: fadeIn 2s ease-in-out, colorShift 4s linear infinite;
     position: relative;
     padding: 10px 0;
     transition: transform 0.3s ease-in-out;
@@ -68,14 +70,6 @@ h1:hover {
     transition: transform 0.3s ease-in-out;
 }
 
-@keyframes colorChange {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}
 
 h1::after {
     content: '';
@@ -85,10 +79,12 @@ h1::after {
     transform: translateX(-50%);
     width: 150px;
     height: 4px;
-    background-color: var(--beige);
+    background: linear-gradient(90deg, var(--secondary), var(--beige));
     border-radius: 2px;
-    animation: slideIn 2s ease-in-out;
+    animation: slideIn 2s ease-in-out, colorShift 4s linear infinite;
+    background-size: 150%;
 }
+
 
 @keyframes slideIn {
     from {
@@ -120,23 +116,31 @@ header nav ul li {
     font-size: 1.1em;
     border-radius: 20px;
     border: 2px solid var(--sub-sub-dark);
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(200, 200, 200, 0.15);
+    text-decoration: none;
+    color: var(--dark);
 }
 
-.bouton::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
-    border-radius: 40%;
-    transform: translate(-50%, -50%);
+.bouton {
+    background-color: var(--sub-sub-dark);
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: 400;
+    border-radius: 20px;
+    border: 2px solid var(--sub-sub-dark);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, font-size 0.3s ease, font-weight 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(200, 200, 200, 0.25);
+}
+
+.bouton:hover {
+    background-color: var(--sub-dark);
+    transform: scale(1.05);
+    color: (var(--white));
 }
 
 .bouton:hover::before {
@@ -146,10 +150,6 @@ header nav ul li {
     left: 50%;
 }
 
-.bouton:hover {
-    background-color: var(--sub-dark);
-    transform: scale(1.05);
-}
 
 .bouton:active {
     transform: scale(0.97);
@@ -181,14 +181,15 @@ main {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     max-width: 1400px;
+    margin: 0 auto;
 }
 
 section {
-    background-color: var(--white);
-    border: 2px solid var(--sub-sub-dark);
+    background-color: var(--white-transparent);
+    border: 5px solid var(--sub-sub-dark);
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-height: 380px;
 }
@@ -196,13 +197,14 @@ section {
 
 section:hover {
     transform: scale(1.1);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 
 main:hover section {
     transform: scale(0.9);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 main:hover section:hover {
@@ -229,7 +231,7 @@ section p, section ul {
 }
 
 footer {
-    background-color: var(--dark);
+    background-color: var(--dark-transparent);
     color: var(--white);
     text-align: center;
     padding: 10px 0;
@@ -254,7 +256,7 @@ p a::before {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background: linear-gradient(90deg, #ff6347, #ffa07a, #ffd700, #adff2f, #00ced1, #1e90ff, #9370db, #ff6347); /* On boucle à nouveau avec la première couleur */
+    background: linear-gradient(90deg, #ff6347, #ffa07a, #ffd700, #adff2f, #00ced1, #1e90ff, #9370db, #ff6347);
     -webkit-background-clip: content-box;
     -webkit-text-fill-color: transparent;
     background-size: 200%;
@@ -265,7 +267,7 @@ p a::before {
 }
 
 p a:hover {
-    background: linear-gradient(90deg, #ff6347, #ffa07a, #ffd700, #adff2f, #00ced1, #1e90ff, #9370db, #ff6347); /* On boucle à nouveau avec la première couleur */
+    background: linear-gradient(90deg, #ff6347, #ffa07a, #ffd700, #adff2f, #00ced1, #1e90ff, #9370db, #ff6347);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200%;
@@ -298,6 +300,7 @@ p a:active::before {
     background-color: var(--secondary-transparent);
     color: var(--white);
     padding: 40px;
+    border: var(--dark) 5px solid;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -308,6 +311,11 @@ p a:active::before {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     animation: fadeIn 1s ease-in-out;
 }  
+
+.promo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
 
 .promo h3 {
     font-size: 2em;
@@ -410,8 +418,6 @@ p a:active::before {
         background-position: 0% 50%;
     }
 }
-
-
 
 
 @keyframes fadeIn {
