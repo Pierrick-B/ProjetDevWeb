@@ -1,12 +1,19 @@
 /* consignes https://github.com/melpiro/ProjetDevWeb */
 
 body {
+    --white: white;
     --black: black;
     --heigth_header: 40px;
+    --heigth_header_d4: 5px;
+    --height_promo: 30px;
+    --heigth_header_promo: 70px;
+    --height_promo_media: 20px;
+    --height_button_media: 20px;
     --heigth_header_media: 150px;
-    --background: #B4D35B;
-    --button_color: rgb(141, 141, 240);
-    --button_hover_color: white;
+    --margin_top_responsive: 190px;
+    --background: #38302e;
+    --button_color: #6f6866;
+    --button_hover_color: #788585;
     --star_color: #F19E39;
 
     margin: 0;
@@ -22,6 +29,8 @@ header {
 .logo {
     display: flex;
     position: fixed;
+    top: 0px;
+    height: var(--heigth_header);
 }
 
 .menu {
@@ -29,23 +38,75 @@ header {
     justify-content: space-evenly;
 }
 
+.button_menu {
+    display: none;
+}
+
 button {
+    padding: 5px;
     background-color: var(--button_color);
     border: solid black 1px;
     border-radius: 15%;
-    font-weight: bold;
-
-
     height: 60%;
+    margin-top: var(--heigth_header_d4);
+    color: var(--white);
 }
 
 button:hover {
     background-color: var(--button_hover_color);
 }
 
-main {
+main>section {
     display: flex;
     flex-direction: row;
+}
+
+
+.promotion {
+
+    margin-left: 25%;
+    display: flex;
+    position: fixed;
+    margin-top: var(--heigth_header);
+    height: var(--height_promo);
+    background-color: var(--star_color);
+    width: 75%;
+    overflow: hidden;
+    /* masque tout ce qui dépasse */
+
+    /* référence à la règle @keyframes mise en oeuvre */
+    animation-duration: 12s;
+    /* valeur à ajuster suivant la longueur du message */
+    animation-iteration-count: infinite;
+    /* boucle continue */
+}
+
+.promotion> :first-child {
+
+    font-weight: bold;
+    font-size: 1.5em;
+
+    display: inline-block;
+    /* modèle de boîte en ligne */
+    padding-right: 2em;
+    /* un peu d'espace pour la transition */
+    padding-left: 100%;
+    /* placement à droite du conteneur */
+    white-space: nowrap;
+    /* pas de passage à la ligne */
+    animation: defilement-rtl 15s infinite linear;
+}
+
+@keyframes defilement-rtl {
+    0% {
+        transform: translate3d(0, 0, 0);
+        /* position initiale à droite */
+    }
+
+    100% {
+        transform: translate3d(-100%, 0, 0);
+        /* position finale à gauche */
+    }
 }
 
 
@@ -58,9 +119,6 @@ main {
 
 }
 
-.parametres>div {
-    border: solid 3px green;
-}
 
 input[type="checkbox"] {
     display: none;
@@ -82,7 +140,7 @@ input[type="checkbox"]:checked+label {
 }
 
 .espace_vente {
-    margin-top: var(--heigth_header);
+    margin-top: var(--heigth_header_promo);
     margin-bottom: 20%;
     margin-left: 25%;
     width: 75%;
@@ -94,7 +152,6 @@ input[type="checkbox"]:checked+label {
 }
 
 .article {
-    border: solid 2px red;
     width: 50%;
     height: 20%;
     display: flex;
@@ -161,16 +218,51 @@ input[type="checkbox"]:checked+label {
     display: none;
 }
 
+.remontePage {
+    width: 5%;
+    display: flex;
+    position: sticky;
+    margin-left: 95%;
+    bottom: 0%;
+}
+
+.remontePage>img {
+    width: 100%;
+}
+
 footer {
     height: 80px;
     background-color: var(--background);
     position: sticky;
+    padding-top: 20px;
 }
 
-@media (max-width:1000px) {
+.copyright {
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--white);
+    font-size: 15px;
+}
+
+@media (max-width:756px) {
 
     header {
-        position: absolute;
+        position: relative;
+        background-color: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        background-color: none;
+    }
+
+    button {
+        margin: 0;
+        border-radius: 0;
+        height: var(--height_button_media);
+        border: none;
+        background-color: var(--background);
     }
 
     .logo {
@@ -181,7 +273,20 @@ footer {
         flex-direction: row;
     }
 
+    .promotion {
+        position: static;
+        height: var(--height_promo_media);
+        width: 100%;
+        margin: 0px;
+        margin-top: 20px;
+    }
+
+    .promotion> :first-child {
+        font-size: 1em;
+    }
+
     .parametres {
+        margin: 0px;
         position: absolute;
         display: flex;
         flex-direction: row;
@@ -197,26 +302,39 @@ footer {
     }
 
     .espace_vente {
-        margin-top: var(--heigth_header_media);
+        margin-top: var(--margin_top_responsive);
+        margin-bottom: 0px;
         margin-left: 0px;
         width: 100%;
+        gap: 0px;
+    }
+
+    .article {
+        width: 50%;
+        height: 260px;
+    }
+
+
+    .article:hover {
+
+        width: 50%;
+        transition: 1s;
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 33%;
+
+        >img {
+            width: 100%;
+            height: 260px;
+        }
+
+        .caracteristiques {
+            height: 260px;
+        }
     }
 }
 
-/* @media (min-width:1200px) {
-    .article {
-        width: 40%;
-        height: 35%;
-        object-fit: cover;
-    }
-
-    .article:hover {
-        width: 40%;
-        flex-direction: column;
-        height: 50%;
-
-    }
-} */
 
 /*
 cd /c/Users/Public/BUT_Info/Github/ProjetDevWeb
@@ -231,4 +349,5 @@ git push
 changer 
 
 boutique_test.css -> boutique.css
+boutique_test.html -> boutique.html
 */
