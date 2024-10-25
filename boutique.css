@@ -11,13 +11,14 @@ body {
     --height_button_media: 20px;
     --heigth_header_media: 150px;
     --margin_top_responsive: 190px;
-    --background: #38302e;
-    --button_color: #6f6866;
-    --button_hover_color: #788585;
-    --star_color: #F19E39;
+    --background: rgb(56, 48, 46);
+    --button_color: rgb(111, 104, 102);
+    --button_hover_color: rgb(120, 133, 133);
+    --star_color: rgb(241, 158, 57);
 
     margin: 0;
 }
+
 
 header {
     background-color: var(--background);
@@ -54,6 +55,14 @@ button {
 
 button:hover {
     background-color: var(--button_hover_color);
+}
+
+main {
+    background-image: url("villeegouts.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 main>section {
@@ -115,7 +124,8 @@ main>section {
     position: fixed;
     width: 25%;
     height: 100%;
-    background-color: var(--button_color);
+    background-color: rgb(111, 104, 102, 0.8);
+    backdrop-filter: blur(10px);
 
 }
 
@@ -130,9 +140,13 @@ label {
 
 input[type="checkbox"]:checked+label {
     transition: 0.25s;
-    color: var(--black);
+    color: var(--white);
     user-select: none;
 
+}
+
+.type>h1 {
+    color: var(--white);
 }
 
 .type div:hover {
@@ -175,8 +189,20 @@ input[type="checkbox"]:checked+label {
         width: 50%;
     }
 
+
     .caracteristiques {
-        background-color: brown;
+        background-color: var(--background);
+    }
+
+    .nom {
+        color: var(--white);
+        font-weight: bold;
+
+    }
+
+    .prix {
+        color: var(--white);
+
     }
 
     .caracteristiques span,
@@ -244,7 +270,7 @@ footer {
     font-size: 15px;
 }
 
-@media (max-width:756px) {
+@media (max-width:700px) {
 
     header {
         position: relative;
@@ -255,6 +281,10 @@ footer {
         display: flex;
         flex-direction: column;
         background-color: none;
+    }
+
+    .button_menu {
+        display: block;
     }
 
     button {
@@ -334,20 +364,3 @@ footer {
         }
     }
 }
-
-
-/*
-cd /c/Users/Public/BUT_Info/Github/ProjetDevWeb
-git pull
-
-    changer page
-
-git add /c/Users/Public/BUT_Info/Github/ProjetDevWeb
-git commit -m "message"
-git push
-
-changer 
-
-boutique_test.css -> boutique.css
-boutique_test.html -> boutique.html
-*/
