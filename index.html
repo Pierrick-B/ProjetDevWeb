@@ -1,88 +1,68 @@
-
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutique de plaques</title>
-    <link rel="stylesheet" href="panier.css">
+    <title>Gridflow - Solutions d'égouts de haute qualité</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/png" href="favicon/favicon-48x48.png" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
     <link rel="manifest" href="favicon/site.webmanifest" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=local_shipping" />
-
 </head>
-
 <body>
     <header>
-        <img class="logo" src="">
-        <nav class="menu">
-            <button onclick="window.location.href='index.html';">Accueil</button>
-            <button onclick="window.location.href='boutique.html';">Boutique</button>
-            <button onclick="window.location.href='panier.html';">Panier</button>
-            <button onclick="window.location.href='apropos.html';">À propos</button>
+        <h1>Gridflow</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" class="logo">
+                        <img src="/favicon/apple-touch-icon.png" alt="Logo Gridflow"/>
+                    </a>
+                </li>
+                <li><a class="bouton" href="boutique.html">Boutique</a></li>
+                <li><a class="bouton" href="panier.html">Panier</a></li>
+                <li><a class="bouton" href="apropos.html">À propos</a></li>
+            </ul>
         </nav>
-    </header>
-        <h1><B>Votre Panier</B> (1 élément)</h1> 
-        <div class="container">
-            <div class="article">
-                <img src="img/plaque_inox_ronde.png">
-                <h2>Plaque Ronde Inox</h2>
-                <p>Robuste mais très lourde. Attention à vos pieds lors de la pose (je conseille les S24 Matrix EVO S3 SRC pour tous les amoureux de canalisations).</p>
-                <ul>
-                    <lI>
-                        <p>Taille : rayon de 80cm </p>
-                    </lI>
-                    <lI>
-                        <p>Forme: ronde </p>
-                    </lI>
-                    <lI>
-                        <p>Couleur: noire </p>
-                    </lI>
-                </ul>
-                <h3>Nombre d'articles: </h3>
-                <input type="number" min="1"  class="input"/>
-            </div>
-            <div class="payer">
-                <div class="aligner">
-                    <h2>Payer:</h2>
-                    <button>paiement</button>
-                </div>
-                <div class="trait"></div>
-                <div class="aligner">
-                    <h3>Produit:</h3> 
-                    <p> 22,99 €</p> 
-                </div>
-                <div class="aligner">
-                    <h3>Livraison: </h3>
-                    <p> 3,00 €</p>
-                </div>
-                <div class="aligner">
-                    <h3>Total: </h3>
-                    <p> 25,99 €</p>
-                </div>
-                <select>
-                    <option>--Choisissez une livraison--</option>
-                    <option>Livraison a domicile</option>
-                    <option>Livraison en Point relais</option>
-                </select><br>
-                <br>
-                <div class="aligner">
-                    <div class="align">
-                        <img src="https://www.svgrepo.com/show/74601/security.svg" class="svg"><h4>Expédié en 48h</h4>
-                    </div>
-                    <div class="align">
-                        <img src="https://www.svgrepo.com/show/74601/security.svg" class="svg">
-                        <h4>Paiements sécurisés</h4>
-                    </div>
-                </div>
-        </div>
-        <footer>
-            <p>&copy; 2024 Gridflow. Tous droits réservés. Alexis Bollengier</p>
-        </footer>
-</body>
+    </header>    
+    
+    <main>
+        <section class="presentation">
+            <h2>Solutions pour infrastructures urbaines</h2>
+            <p><span class="bold">Gridflow</span> propose des solutions innovantes pour la gestion des eaux, conçues pour répondre aux attentes des municipalités, entreprises et particuliers.</p>
+        </section>
+    
+        <section class="valeurs">
+            <h2>Nos valeurs</h2>
+            <p><span class="bold">Qualité :</span> Produits robustes, construits pour résister.</p>
+            <p><span class="bold">Écologie :</span> Méthodes respectueuses de notre planète.</p>
+            <p><span class="bold">Sécurité :</span> Conformes aux normes les plus strictes.</p>
+        </section>
+    
+        <section class="choisir-gridflow">
+            <h2>Pourquoi Gridflow ?</h2>
+            <p>Experts en bouches d'égouts, Gridflow vous assure des produits fiables et performants pour vos projets d’infrastructure.</p>
+            <p>Nous développons des solutions durables et innovantes, en nous engageant à adapter nos services à vos exigences uniques.</p>
+        </section>              
+    
+        <section class="produits">
+            <h2>Nos produits</h2>
+            <p>Explorez notre sélection de solutions adaptées à chaque type de projet.<a href="boutique.html">Visitez notre boutique</a> pour plus d’informations.</p>
+        </section>
+    </main>
+      
+    
 
+    <div class="promo">
+        <h3>Promotion Spéciale</h3>
+        <p>Profitez de <span class="multi">20%</span> de réduction sur toutes les bouches d'égouts jusqu'à la fin du mois !</p>
+        <a href="boutique.html" class="btn-promo">Voir les offres</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Gridflow. Tous droits réservés. Pierrick Bapicot</p>
+    </footer>
+</body>
 </html>
