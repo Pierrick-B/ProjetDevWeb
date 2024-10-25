@@ -7,7 +7,7 @@
 - Le panier a été réalisé par Alexis
 - La page à propos a été réalisée par Valentin
 
-*Nom2 et Nom3 ont travaillé ensemble sur le header/footer*
+*Jolan à travaillé sur le header des pages autre que le menu*
 
 **Lien du site (hébergé sur github) :** 
 
