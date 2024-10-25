@@ -1,4 +1,38 @@
 
+h1 {
+    font-size: 2vw; 
+}
+
+h2 {
+    font-size: 1.5vw;
+}
+
+h3 {
+    font-size: 1.3vw;
+}
+
+h4 {
+    font-size: 1.1vw;
+}
+
+
+p, ul, input {
+    font-size: 1.2vw; 
+}
+
+
+footer p {
+    font-size: 1.3vw;
+}
+
+header>nav>button{
+    border:hidden;
+    height:50px;
+    width: auto;
+    font-size:2vw;
+    background-color: transparent;
+}
+
 body {
     --background: rgb(138, 33, 33);
     --button_color: rgb(141, 141, 240);
@@ -8,6 +42,7 @@ body {
     background-repeat: no-repeat;
     background-position: center; 
     background-attachment: fixed;
+    border:0%;
 }
 
 header {
@@ -30,16 +65,15 @@ header {
 }
 
 button {
-
-
     font-weight: bold;
     height: 60%;
 }
 
-.payer>button{
-    width: 300px;
-    height:50px;
-    background-color: black;
+.payer>div>button{
+    width: 80%;
+    height:auto;
+    background-color: rgb(255, 255, 255);
+    font-size:1.1vw;
     
 }
 
@@ -77,19 +111,24 @@ section {
 .article {
     border: solid 3px rgb(0, 0, 0);
     width: 30%;
-    height: 500px;
+    height: 100vh;
     margin-left: 5px;
     background-color: rgba(255, 255, 255, 0.5); 
     backdrop-filter: blur(10px);
     padding: 20px; 
     border-radius: 10px;
-  
+    overflow:hidden;
+
 }
 
 .article>img {
     margin-left: auto;
     margin-right: auto;
     border:solid;
+    width:70%;
+    height:auto;
+    
+
 }
 
 main>h1{
@@ -98,25 +137,21 @@ main>h1{
 
 .payer{
     border: solid 3px rgb(0, 0, 0);
-    width: 30%;
-    height: 630px;
+    width: 55vw;
+    height:100vh;
     margin-right:50px;
-    background-color: rgba(255, 255, 255, 0.5); 
+    background-color: rgba(255, 255, 255, 0.694); 
     backdrop-filter: blur(10px);
     padding: 20px; 
     border-radius: 10px; 
-   
-   
- 
 }
 
 
 .input{
-    height:50px;
-    width:200px;
-
+    width: 100%;
+    height: 5vh;
     background-color:rgb(255, 255, 255);
-    color:white;
+    color:rgb(0, 0, 0);
     font-size: 20px; 
     text-align: center
 }
@@ -126,4 +161,92 @@ main>h1{
     justify-content: space-between; 
     align-items: flex-start; 
     width: 100%;
+}
+
+.svg{
+    width: 5vw;
+    height:5vh;
+}
+
+.align{
+    text-align: center;
+}
+
+
+select{
+    height:50px;
+    width:100%;
+    background-color:rgb(249, 249, 249);
+    color:rgb(0, 0, 0);
+    font-size: 2vh; 
+}
+
+.trait {
+    border-top: 2px solid black; 
+    width: 100%; 
+    margin: 20px 0; 
+}
+
+.aligner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+footer {
+    background-color: rgba(56, 48, 46, 0.95);
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+    width: 100%; 
+    height:10vh;
+    position: absolute; 
+    top: 135vh; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+@media (max-width: 600px) {
+    .payer, .article {
+        width: 100%; 
+        margin: 0; 
+    }
+}
+
+@media (max-height: 300px) {
+    .payer, .article {
+        height:160vh;
+    }
+}
+@media (max-height: 330px) {
+    footer {
+        top: 200vh; 
+        
+    }
+}
+
+@media (max-height: 200px) {
+    .payer, .article {
+        height:190vh;
+    }
+}
+@media (max-height: 230px) {
+    footer {
+        top: 250vh; 
+        
+    }
+}
+
+@media (max-height: 330px) {
+    footer {
+        height:20vh;
+        
+        
+    }
 }
