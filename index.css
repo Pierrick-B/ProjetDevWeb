@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-
+    font-size: 14px;
     --dark: #38302e; 
     --sub-dark: #6f6866;
     --sub-sub-dark: #788585; 
@@ -12,8 +12,9 @@ html, body {
     --white: #ffffff;
     --beige: #f5f5dc;
     --gray: #9caea9;
-
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: var(--background);
     color: var(--dark);
 }
@@ -25,19 +26,26 @@ html, body {
 a {
     text-decoration: none;
     color: var(--dark);
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: var(--secondary);
 }
 
 header {
     background-color: var(--dark);
     color: var(--white);
-    padding: 15px 0;
+    padding: 10px 0;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     text-align: center;
@@ -49,7 +57,6 @@ header h1 {
     position: relative;
     padding: 10px 0;
 }
-
 
 @keyframes colorChange {
     0% {
@@ -98,14 +105,14 @@ header nav ul li {
 
 header nav ul li a {
     background-color: var(--sub-sub-dark);
-    padding: 10px 20px;
-    border-radius: 25px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 20px;
     border: 2px solid var(--sub-sub-dark);
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
-    transform: scale(1.05) rotate(3deg);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 40px rgba(200, 200, 200, 0.25);
 }
 
 header nav ul li a::before {
@@ -122,38 +129,70 @@ header nav ul li a::before {
 }
 
 header nav ul li a:hover::before {
-    width: 150%;
-    height: 150%;
+    width: 180%;
+    height: 180%;
     top: 50%;
     left: 50%;
 }
 
 header nav ul li a:hover {
-    background-color: var(--sub-dark); 
-    transform: scale(1) rotate(0); 
-    box-shadow: none; 
+    background-color: var(--sub-dark);
+    transform: scale(1.05);
+    box-shadow: 0 25px 45px rgba(200, 200, 200, 0.30);
 }
 
 header nav ul li a:active {
-    transform: scale(0.95);
+    transform: scale(0.97);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+
 main {
-    padding: 30px;
+    flex-grow: 1;
+    padding: 20px;
     text-align: center;
-    font-size: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grille adaptable */
+    gap: 20px;
+}
+
+section {
+    background-color: var(--white);
+    border: 2px solid var(--sub-sub-dark);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+section p, section ul {
+    padding: 12px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 footer {
     background-color: var(--dark);
     color: var(--white);
     text-align: center;
-    padding: 15px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    margin-top: auto;
 }
 
 footer p {
@@ -211,6 +250,7 @@ p a:active::before {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
 }   
 
 .promo h3 {
@@ -282,28 +322,70 @@ p a:active::before {
     }
 }
 
-
-
-
-
-
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     header nav ul {
         flex-direction: column;
-        gap: 15px;
+        gap: 0;
     }
 
     header nav ul li {
-        margin: 8px;
+        margin: 0;
+        width: 100%;
     }
 
-    main {
-        padding: 20px;
-        font-size: 1.2em;
+    header nav ul li a {
+        display: flex;
+        flex-direction: column;
+        width: 98%;
+        padding: 12px 0;
+        font-size: 1em;
+        background-color: var(--sub-dark);
+        color: var(--white);
+        border-radius: 15px;
+        box-shadow: none;
+        transform: none;
+        transition: background-color 0.3s ease;
+        margin: 5px auto;
+    }
+    
+
+    header nav ul li a:hover {
+        background-color: var(--sub-sub-dark);
+        color: var(--beige);
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1em;
+    }
+
+    header nav ul {
+        gap: 0;
+    }
+
+    header nav ul li {
+        margin: 0;
+        width: 100%;
+    }
+
+    header nav ul li a {
+        padding: 10px 0;
+        font-size: 0.8em;
+        background-color: var(--sub-dark);
+        color: var(--white);
+        text-align: center;
+        border-radius: 0;
+        box-shadow: none;
+        transform: none;
+    }
+
+    header nav ul li a:hover {
+        background-color: var(--sub-sub-dark-dark);
+        color: var(--beige);
     }
 }
