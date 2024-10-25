@@ -494,7 +494,7 @@ p a:active::before {
         width: 100%;
     }
 
-    header nav ul li a {
+    .bouton {
         padding: 10px 0;
         font-size: 0.8em;
         background-color: var(--sub-dark);
@@ -505,7 +505,7 @@ p a:active::before {
         transform: none;
     }
 
-    header nav ul li a:hover {
+    .bouton:hover {
         background-color: var(--sub-sub-dark-dark);
         color: var(--beige);
     }
