@@ -220,15 +220,15 @@ footer {
     }
 }
 
-@media (max-height: 400px) {
+@media (max-height: 440px) {
     footer {
-        top: 390vh;
+        top: 360vh;
         
     }
 }
-@media (max-height: 400px) {
+@media (max-height: 440px) {
     .payer, .article {
-        height:350vh;
+        height:380vh;
     }
 }
 
