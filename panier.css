@@ -219,12 +219,12 @@ footer {
         height:150vh;
     }
 }
-@media (max-height: 400px) {
+@media (max-height: 700px) {
     .payer, .article {
         height:160vh;
     }
 }
-@media (max-height: 330px) {
+@media (max-height: 500px) {
     footer {
         top: 200vh; 
         
