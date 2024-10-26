@@ -1,1 +1,72 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="apropos.css">
+    <link rel="icon" type="image/png" href="favicon/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <title>À propos</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="favicon/apple-touch-icon.png" onclick="window.location.href='index.html';">
+        <nav class="menu">
+            <button onclick="window.location.href='index.html';">Accueil</button>
+            <button onclick="window.location.href='boutique.html';">Boutique</button>
+            <button onclick="window.location.href='panier.html';">Panier</button>
+            <button onclick="window.location.href='apropos.html';">À propos</button>
+        </nav>
+    </header>
+    <main>
+        <section class="explication">
+            <div>
+                <h2>Histoire</h2>
+                <p>
+                    Fondée en 2015, GridFlow est née du constat que les infrastructures urbaines, comme les bouches d'égouts, devaient être robustes et durables pour répondre aux défis modernes. Les fondateurs, tous experts en génie civil, ont décidé de concentrer leur savoir-faire sur la conception de bouches d'égouts de haute qualité, résistances et esthétiques, destinées aux villes et aux zones industrielles. Grâce à des matériaux renforcés et des tests de durabilité intensifs, les produits de GridFlow ont rapidement gagné en popularité en France. Cette notoriété a permis à l'entreprise de se lancer sur le marché international, où elle est désormais reconnue comme un acteur fiable. Aujourd'hui, ses bouches d'égouts équipent les plus grandes métropoles, apportant une solution efficace aux infrastructures de drainage.
+                </p>
+            </div>
+        </section>
+        <br>
+        <section class="formu">
+            <div class="contactez-nous">
+                <h1><B>Contactez-nous</B></h1>
+                <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas à utiliser ce formulaire pour prendre contact avec nous !</p>
+                <form action="/page-traitement-donnees" method="post" class="form">
+                    <div>
+                        <label for="nom">Votre nom</label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                    </div>
+                    <div>
+                        <label for="email">Votre e-mail</label>
+                        <input type="email" id="email" name="email" placeholder="monadresse@mail.com" required>
+                    </div>
+                    <div>
+                        <label for="sujet">Quel est le sujet de votre message ?</label>
+                        <select name="sujet" id="sujet" required>
+                            <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
+                            <option value="probleme-compte">Problème avec mon compte</option>
+                            <option value="question-produit">Question à propos d’un produit</option>
+                            <option value="suivi-commande">Suivi de ma commande</option>
+                            <option value="autre">Autre...</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message">Votre message</label>
+                        <textarea id="message" name="message" placeholder="Bonjour, je vous contacte car...." required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">Envoyer mon message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <span>© 2024 Gridflow. Tous droits réservés. Valentin Chaudrillier</span>
+    </footer>
+</body>
+</html>

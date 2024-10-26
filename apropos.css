@@ -1,0 +1,234 @@
+body {
+    --white: white;
+    --black: black;
+    --heigth_header: 40px;
+    --heigth_header_d4: 5px;
+    --height_promo: 30px;
+    --heigth_header_promo: 70px;
+    --height_promo_media: 20px;
+    --height_button_media: 20px;
+    --heigth_header_media: 150px;
+    --margin_top_responsive: 190px;
+    --background: rgb(56, 48, 46);
+    --button_color: rgb(111, 104, 102);
+    --button_hover_color: rgb(120, 133, 133);
+    --star_color: rgb(241, 158, 57);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+header {
+    background-color: var(--background);
+    position: fixed;
+    width: 100%;
+    height: var(--heigth_header);
+}
+
+.logo {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    height: var(--heigth_header);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button_menu {
+    display: none;
+}
+
+button {
+    padding: 5px;
+    background-color: var(--button_color);
+    border: solid black 1px;
+    border-radius: 15%;
+    height: 60%;
+    margin-top: var(--heigth_header_d4);
+    color: var(--white);
+}
+
+header>nav>button:hover {
+    background-color: var(--button_hover_color);
+}
+
+main {
+    background-image: url("villeegouts.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 50px;
+}
+
+main>section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.explication {
+    text-align:justify;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 30px;
+    padding-top: 15px;   
+    padding-bottom: 15px;
+}
+
+/* formulaire */
+
+
+.contactez-nous {
+    display: block;
+    width: 700px;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 0 50px 0 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+    
+.contactez-nous > h1 {
+    font-weight: 500;
+}
+    
+.contactez-nous > p {
+    font-weight: 300;
+}
+    
+form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 83px;
+    margin-top: 25px;
+}
+    
+form div > label {
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+    
+form div > input, form div > select, form div > textarea {
+    background: rgb(56, 48,46, 0.95);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+}
+    
+form div > input, form div > select {
+    height: 50px;
+    padding-left: 10px;
+}
+    
+form div > select {
+    appearance: none;
+    background-size: 15px;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDIxMy4zMzMgMjEzLjMzMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cG9seWdvbiBwb2ludHM9IjAsNTMuMzMzIDEwNi42NjcsMTYwIDIxMy4zMzMsNTMuMzMzICAgIiBmaWxsPSIjMzAzMDMwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BvbHlnb24+Cgk8L2c+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg==');
+    background-position: right 10px top 50%;
+    background-repeat: no-repeat;
+}
+    
+form div > textarea {
+    height: 195px;
+    padding: 15px 0px 0px 10px;
+}
+    
+form div > input::placeholder, form div > textarea::placeholder {
+    color: white;
+}
+    
+form div > select:invalid {
+    color: white;
+}
+    
+form div > select option {
+    background: white;
+    color: #303030;
+}
+    
+form div:last-child {
+    align-items:center;
+    margin-top: 20px;
+}
+    
+form button {
+    width: 80%;
+    max-width: 500px;
+    height: 5%;
+    font-weight: 700;
+    font-size: 28px;
+    background: white;
+    border: rgba(48, 48, 48, 0.5) solid 1px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    color: #303030;
+}
+
+form button:hover {
+    background-color: grey;
+}
+
+footer {
+    height: 80px;
+    background-color: var(--background);
+    position: sticky;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--white);
+    font-size: 15px;
+}
+
+
+@media (max-width:700px){
+    main {
+        padding-top: 80px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        background-color: none;
+    }
+
+    .button_menu {
+        display: block;
+    }
+
+    header>nav>button {
+        margin: 0;
+        border-radius: 0;
+        height: var(--height_button_media);
+        border: none;
+        background-color: var(--background);
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .contactez-nous {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
