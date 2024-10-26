@@ -216,33 +216,31 @@ footer {
     .payer, .article {
         width: 100%; 
         margin: 0; 
+        height:150vh;
     }
 }
-
 @media (max-height: 300px) {
     .payer, .article {
         height:160vh;
     }
 }
-@media (max-height: 350px) {
+@media (max-height: 330px) {
     footer {
         top: 200vh; 
         
     }
 }
-
 @media (max-height: 200px) {
     .payer, .article {
         height:190vh;
     }
 }
-@media (max-height: 250px) {
+@media (max-height: 230px) {
     footer {
-        top: 240vh; 
+        top: 250vh; 
         
     }
 }
-
 @media (max-height: 330px) {
     footer {
         height:20vh;
