@@ -10,6 +10,7 @@ body {
     --heigth_header_d4: 5px;
     --button_color: rgb(111, 104, 102);
     font-family: 'Poppins', sans-serif;
+    --button_hover_color: rgb(120, 133, 133);
 }
 
 header {
