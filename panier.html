@@ -12,6 +12,8 @@
     <link rel="shortcut icon" href="favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
     <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=local_shipping" />
+
 </head>
 
 <body>
@@ -24,12 +26,12 @@
             <button onclick="window.location.href='apropos.html';">À propos</button>
         </nav>
     </header>
-        <h1><B>Votre Panier</B></h1> <p>(1 élément)</p>
-        <br>
+        <h1><B>Votre Panier</B> (1 élément)</h1> 
         <div class="container">
             <div class="article">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg">
-                <h1>Nom du produit</h1>
+                <img src="img/plaque_inox_ronde.png">
+                <h2>Plaque Ronde Inox</h2>
+                <p>Robuste mais très lourde. Attention à vos pieds lors de la pose (je conseille les S24 Matrix EVO S3 SRC pour tous les amoureux de canalisations).</p>
                 <ul>
                     <lI>
                         <p>Taille : rayon de 80cm </p>
@@ -38,28 +40,49 @@
                         <p>Forme: ronde </p>
                     </lI>
                     <lI>
-                        <p>Couleur: brun</p>
+                        <p>Couleur: noire </p>
                     </lI>
                 </ul>
                 <h3>Nombre d'articles: </h3>
                 <input type="number" min="1"  class="input"/>
             </div>
             <div class="payer">
-                <h2>Payer:</h2>
-                <h3>Sous-total:</h3>  <p> 22,99 €</p>
-                <h3>Livraison </h3>  <p> 3,99 €</p>
-                <select name="pets" id="pet-select">
-                <option value="">--Choisissez une livraison--</option>
-                <option value="dog">Livraison a domicile</option>
-                <option value="cat">Livraison en Point relais</option>
+                <div class="aligner">
+                    <h2>Payer:</h2>
+                    <button>paiement</button>
+                </div>
+                <div class="trait"></div>
+                <div class="aligner">
+                    <h3>Produit:</h3> 
+                    <p> 22,99 €</p> 
+                </div>
+                <div class="aligner">
+                    <h3>Livraison: </h3>
+                    <p> 3,00 €</p>
+                </div>
+                <div class="aligner">
+                    <h3>Total: </h3>
+                    <p> 25,99 €</p>
+                </div>
+                <select>
+                    <option>--Choisissez une livraison--</option>
+                    <option>Livraison a domicile</option>
+                    <option>Livraison en Point relais</option>
                 </select><br>
-                <script src="https://static.elfsight.com/platform/platform.js" async></script>
-<div class="elfsight-app-59a5354a-f99d-4a32-be0a-b1655a6c8cf8" data-elfsight-app-lazy></div>
-            </div>
+                <br>
+                <div class="aligner">
+                    <div class="align">
+                        <img src="https://www.svgrepo.com/show/74601/security.svg" class="svg"><h4>Expédié en 48h</h4>
+                    </div>
+                    <div class="align">
+                        <img src="https://www.svgrepo.com/show/74601/security.svg" class="svg">
+                        <h4>Paiements sécurisés</h4>
+                    </div>
+                </div>
         </div>
-    <footer>
-    </footer>
-
+        <footer>
+            <p>&copy; 2024 Gridflow. Tous droits réservés. Alexis Bollengier</p>
+        </footer>
 </body>
 
 </html>
