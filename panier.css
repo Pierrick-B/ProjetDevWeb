@@ -19,7 +19,7 @@ p, ul, input {
 }
 
 footer p {
-    font-size: calc(1.3vw + 1.3vh);
+    font-size: calc(0.9vw + 0.9vh);
 }
 
 header>nav>button {
