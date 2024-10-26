@@ -30,6 +30,10 @@ header>nav>button {
     background-color: transparent;
 }
 
+header>nav>button:hover {
+    background-color:rgb(225, 225, 255)
+}
+
 body {
     background-image: url("villeegouts.jpg");
     background-size: cover; 
@@ -69,10 +73,11 @@ button {
     height: 10vh;
     background-color: rgb(255, 255, 255);
     font-size: calc(1vw + 1vh);
+
 }
 
-button:hover {
-    background-color: var(--button_hover_color);
+.payer>div>button:hover {
+    transform: scale(1.05)
 }
 
 main {
@@ -113,7 +118,7 @@ section {
     overflow: hidden;
 }
 
-.article>img {
+.article>div>img {
     margin-left: auto;
     margin-right: auto;
     border: solid;
@@ -154,7 +159,7 @@ main>h1 {
 }
 
 .svg {
-    width: 5vw;
+    width: auto;
     height: 5vh;
 }
 
@@ -268,3 +273,53 @@ footer {
     }
 }
 
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.etoile-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: polygon(
+        50% 0%, 
+        61% 38%, 
+        98% 38%, 
+        68% 61%, 
+        79% 98%, 
+        50% 75%, 
+        21% 98%, 
+        32% 61%, 
+        2% 38%, 
+        39% 38%
+    );
+    background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet);
+    animation: rotate 5s linear infinite;
+    opacity: 0.7;
+    z-index: -1;
+    transform: scale(1.5) rotate(0deg);
+}
+
+.image-container img {
+    position: relative;
+    z-index: 1;
+    width: auto;
+    height: 100%;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
