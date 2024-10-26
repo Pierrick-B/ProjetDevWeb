@@ -219,14 +219,14 @@ footer {
         height:150vh;
     }
 }
-@media (max-height: 350px) {
+@media (max-height: 200px) {
     .payer, .article {
-        height:240vh;
+        height:220vh;
     }
 }
-@media (max-height: 350px) {
+@media (max-height: 200px) {
     footer {
-        top: 280vh; 
+        top: 250vh; 
         
     }
 }
