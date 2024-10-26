@@ -1,55 +1,51 @@
-
 h1 {
-    font-size: 2vw; 
+    font-size: calc(2vw + 2vh); 
 }
 
 h2 {
-    font-size: 1.5vw;
+    font-size: calc(1.4vw + 1.4vh);
 }
 
 h3 {
-    font-size: 1.3vw;
+    font-size: calc(1.3vw + 1.3vh);
 }
 
 h4 {
-    font-size: 1.1vw;
+    font-size: calc(1.1vw + 1.1vh);
 }
-
 
 p, ul, input {
-    font-size: 1.2vw; 
+    font-size: calc(0.8vw + 0.8vh); 
 }
-
 
 footer p {
-    font-size: 1.3vw;
+    font-size: calc(1.3vw + 1.3vh);
 }
 
-header>nav>button{
-    border:hidden;
-    height:50px;
+header>nav>button {
+    border: hidden;
+    height: 50px;
     width: auto;
-    font-size:2vw;
+    font-size: calc(2vw + 1vh);
     background-color: transparent;
+    font-size: calc(1.4vw + 1.4vh);
 }
 
 body {
-    --background: rgb(138, 33, 33);
-    --button_color: rgb(141, 141, 240);
-    --button_hover_color: white;
     background-image: url("villeegouts.jpg");
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center; 
     background-attachment: fixed;
-    border:0%;
+    border: 0%;
+    min-height: 220px;
 }
 
 header {
     background-color: rgba(255, 255, 255, 0.5); 
     backdrop-filter: blur(10px);
     padding: 20px; 
-    border-color:black;
+    border-color: black;
     border-width: 3px;
 
 }
@@ -69,12 +65,11 @@ button {
     height: 60%;
 }
 
-.payer>div>button{
+.payer>div>button {
     width: 80%;
-    height:auto;
+    height: auto;
     background-color: rgb(255, 255, 255);
-    font-size:1.1vw;
-    
+    font-size: calc(1.1vw + 1vh);
 }
 
 button:hover {
@@ -106,9 +101,8 @@ section {
     align-items: center;
 }
 
-
-
 .article {
+    min-height: calc(100vh - 220px);
     border: solid 3px rgb(0, 0, 0);
     width: 30%;
     height: 100vh;
@@ -117,67 +111,63 @@ section {
     backdrop-filter: blur(10px);
     padding: 20px; 
     border-radius: 10px;
-    overflow:hidden;
-
+    overflow: hidden;
 }
 
 .article>img {
     margin-left: auto;
     margin-right: auto;
-    border:solid;
-    width:70%;
-    height:auto;
-    
-
+    border: solid;
+    width: 70%;
+    height: auto;
 }
 
-main>h1{
-    font-size: 30px;
+main>h1 {
+    font-size: calc(2vw + 2vh);
 }
 
-.payer{
+.payer {
+    min-height: calc(100vh - 220px);
     border: solid 3px rgb(0, 0, 0);
     width: 55vw;
-    height:100vh;
-    margin-right:50px;
+    height: 100vh;
+    margin-right: 50px;
     background-color: rgba(255, 255, 255, 0.694); 
     backdrop-filter: blur(10px);
     padding: 20px; 
     border-radius: 10px; 
 }
 
-
-.input{
+.input {
     width: 100%;
     height: 5vh;
-    background-color:rgb(255, 255, 255);
-    color:rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 20px; 
-    text-align: center
+    text-align: center;
 }
 
-.container{
+.container {
     display: flex; 
     justify-content: space-between; 
     align-items: flex-start; 
     width: 100%;
 }
 
-.svg{
+.svg {
     width: 5vw;
-    height:5vh;
+    height: 5vh;
 }
 
-.align{
+.align {
     text-align: center;
 }
 
-
-select{
-    height:50px;
-    width:100%;
-    background-color:rgb(249, 249, 249);
-    color:rgb(0, 0, 0);
+select {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(249, 249, 249);
+    color: rgb(0, 0, 0);
     font-size: 2vh; 
 }
 
@@ -187,7 +177,7 @@ select{
     margin: 20px 0; 
 }
 
-.aligner{
+.aligner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -198,7 +188,7 @@ footer {
     text-align: center;
     padding: 10px;
     width: 100%; 
-    height:10vh;
+    height: 10vh;
     position: absolute; 
     top: 135vh; 
     left: 0; 
@@ -210,30 +200,69 @@ footer {
     box-sizing: border-box;
 }
 
-
-
 @media (max-width: 600px) {
     .payer, .article {
         width: 100%; 
         margin: 0; 
-        height:150vh;
+        
     }
 }
 
 @media (max-height: 440px) {
     footer {
-        top: 360vh;
-        
+        top: 180vh;
     }
 }
+
+@media (max-height: 400px) {
+    footer {
+        top: 200vh;
+    }
+}
+
 @media (max-height: 440px) {
     .payer, .article {
-        height:380vh;
+        height: 120vh;
     }
 }
 
 @media (max-height: 330px) {
     footer {
-        height:20vh;
+        height: 20vh;
+    }
+}
+
+@media (max-height: 275px) {
+    .payer, .article {
+        height: 140vh;
+    }
+    
+}
+
+@media (max-height: 230px) {
+    footer {
+        top: 250vh;
+    }
+    .payer, .article {
+        height: 180vh;
+    }
+}
+
+@media (max-height: 200px) {
+    footer {
+        top: 290vh;
+    }
+    .payer, .article {
+        height: 200vh;
+    }
+}
+
+@media (max-height: 155px) {
+    footer {
+        top: 350vh;
+        
+    }
+    .payer, .article {
+        height: 250vh;
     }
 }
