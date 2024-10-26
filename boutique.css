@@ -15,7 +15,7 @@ body {
     --button_color: rgb(111, 104, 102);
     --button_hover_color: rgb(120, 133, 133);
     --star_color: rgb(241, 158, 57);
-
+    font-family: 'Poppins', sans-serif;
     margin: 0;
 }
 

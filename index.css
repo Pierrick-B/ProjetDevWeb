@@ -435,6 +435,7 @@ p a:active::before {
 
     header {
         position: relative;
+        width: auto;
     }
 
     header h1 {
@@ -449,6 +450,13 @@ p a:active::before {
     header nav ul li {
         margin: 0;
         width: 100%;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px 20px 10px 20px;
     }
 
     .bouton {
@@ -472,6 +480,10 @@ p a:active::before {
         color: var(--beige);
         box-shadow: none;
         transform: none;
+    }
+
+    .promo {
+        margin: 40px 20px 40px 20px;
     }
 
     .logo {
