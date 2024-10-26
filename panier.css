@@ -1,3 +1,62 @@
+body {
+    background-image: url("villeegouts.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-attachment: fixed;
+    margin: 0;
+    --background: rgb(56, 48, 46);
+    --heigth_header: 40px;
+    --heigth_header_d4: 5px;
+    --button_color: rgb(111, 104, 102);
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: var(--background);
+    position: fixed;
+    width: 100%;
+    height: var(--heigth_header);
+    top: 0; 
+    left: 0; 
+    z-index: 1000; 
+}
+
+.logo {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    height: var(--heigth_header);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button_menu {
+    display: none;
+}
+
+header > nav > button {
+    padding: 5px;
+    background-color: var(--button_color);
+    border: solid black 1px;
+    border-radius: 15%;
+    height: 60%;
+    margin-top: var(--heigth_header_d4);
+    color: white;
+}
+
+header > nav > button:hover {
+    background-color: var(--button_hover_color);
+}
+
+button {
+    font-weight: bold;
+    height: 60%;
+}
+
 h1 {
     font-size: calc(2vw + 2vh); 
 }
@@ -22,62 +81,12 @@ footer p {
     font-size: calc(0.9vw + 0.9vh);
 }
 
-header>nav>button {
-    border: hidden;
-    height: 50px;
-    width: auto;
-    font-size: calc(1vw + 1vh);
-    background-color: transparent;
+.parametres {
+    width: 25%;
 }
 
-header>nav>button:hover {
-    background-color:rgb(225, 225, 255)
-}
-
-body {
-    background-image: url("villeegouts.jpg");
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-attachment: fixed;
-    border: 0%;
-    min-height: 220px;
-}
-
-header {
-    background-color: rgba(255, 255, 255, 0.5); 
-    backdrop-filter: blur(10px);
-    padding: 20px; 
-    border-color: black;
-    border-width: 3px;
-
-}
-
-.logo {
-    display: flex;
-    position: fixed;
-}
-
-.menu {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-button {
-    font-weight: bold;
-    height: 60%;
-}
-
-.payer>div>button {
-    width: auto;
-    height: 10vh;
-    background-color: rgb(255, 255, 255);
-    font-size: calc(1vw + 1vh);
-
-}
-
-.payer>div>button:hover {
-    transform: scale(1.05)
+.parametres > div {
+    border: solid 3px green;
 }
 
 main {
@@ -87,14 +96,6 @@ main {
 
 section {
     border: solid 3px black;
-}
-
-.parametres {
-    width: 25%;
-}
-
-.parametres>div {
-    border: solid 3px green;
 }
 
 .espace_vente {
@@ -118,16 +119,12 @@ section {
     overflow: hidden;
 }
 
-.article>div>img {
+.article > div > img {
     margin-left: auto;
     margin-right: auto;
     border: solid;
     width: auto;
-    height: 20vh ;
-}
-
-main>h1 {
-    font-size: calc(2vw + 2vh);
+    height: 20vh;
 }
 
 .payer {
@@ -167,7 +164,6 @@ main>h1 {
     text-align: center;
 }
 
-
 select {
     height: 5vh;
     width: 100%;
@@ -186,7 +182,6 @@ select {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-
 
 footer {
     background-color: rgba(56, 48, 46, 0.95);
@@ -210,7 +205,6 @@ footer {
     .payer, .article {
         width: 100%; 
         margin: 0; 
-        
     }
 }
 
@@ -242,7 +236,6 @@ footer {
     .payer, .article {
         height: 160vh;
     }
-    
 }
 
 @media (max-height: 230px) {
@@ -266,7 +259,6 @@ footer {
 @media (max-height: 155px) {
     footer {
         top: 390vh;
-        
     }
     .payer, .article {
         height: 270vh;
