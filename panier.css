@@ -224,7 +224,7 @@ footer {
         height:160vh;
     }
 }
-@media (max-height: 330px) {
+@media (max-height: 350px) {
     footer {
         top: 200vh; 
         
@@ -236,9 +236,9 @@ footer {
         height:190vh;
     }
 }
-@media (max-height: 230px) {
+@media (max-height: 250px) {
     footer {
-        top: 250vh; 
+        top: 240vh; 
         
     }
 }
