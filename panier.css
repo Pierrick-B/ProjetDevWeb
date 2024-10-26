@@ -3,19 +3,19 @@ h1 {
 }
 
 h2 {
-    font-size: calc(1.4vw + 1.4vh);
+    font-size: calc(1.2vw + 1.2vh);
 }
 
 h3 {
-    font-size: calc(1.3vw + 1.3vh);
-}
-
-h4 {
     font-size: calc(1.1vw + 1.1vh);
 }
 
+h4 {
+    font-size: calc(0.8vw + 0.8vh);
+}
+
 p, ul, input {
-    font-size: calc(0.8vw + 0.8vh); 
+    font-size: calc(0.7vw + 0.7vh); 
 }
 
 footer p {
@@ -26,9 +26,8 @@ header>nav>button {
     border: hidden;
     height: 50px;
     width: auto;
-    font-size: calc(2vw + 1vh);
+    font-size: calc(1vw + 1vh);
     background-color: transparent;
-    font-size: calc(1.4vw + 1.4vh);
 }
 
 body {
@@ -66,10 +65,10 @@ button {
 }
 
 .payer>div>button {
-    width: 80%;
-    height: auto;
+    width: auto;
+    height: 10vh;
     background-color: rgb(255, 255, 255);
-    font-size: calc(1.1vw + 1vh);
+    font-size: calc(1vw + 1vh);
 }
 
 button:hover {
@@ -118,8 +117,8 @@ section {
     margin-left: auto;
     margin-right: auto;
     border: solid;
-    width: 70%;
-    height: auto;
+    width: auto;
+    height: 20vh ;
 }
 
 main>h1 {
@@ -163,8 +162,9 @@ main>h1 {
     text-align: center;
 }
 
+
 select {
-    height: 50px;
+    height: 5vh;
     width: 100%;
     background-color: rgb(249, 249, 249);
     color: rgb(0, 0, 0);
@@ -181,6 +181,7 @@ select {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
 
 footer {
     background-color: rgba(56, 48, 46, 0.95);
@@ -210,19 +211,19 @@ footer {
 
 @media (max-height: 440px) {
     footer {
-        top: 180vh;
+        top: 210vh;
     }
 }
 
 @media (max-height: 400px) {
     footer {
-        top: 200vh;
+        top: 230vh;
     }
 }
 
 @media (max-height: 440px) {
     .payer, .article {
-        height: 120vh;
+        height: 140vh;
     }
 }
 
@@ -234,35 +235,36 @@ footer {
 
 @media (max-height: 275px) {
     .payer, .article {
-        height: 140vh;
+        height: 160vh;
     }
     
 }
 
 @media (max-height: 230px) {
     footer {
-        top: 250vh;
-    }
-    .payer, .article {
-        height: 180vh;
-    }
-}
-
-@media (max-height: 200px) {
-    footer {
-        top: 290vh;
+        top: 280vh;
     }
     .payer, .article {
         height: 200vh;
     }
 }
 
+@media (max-height: 200px) {
+    footer {
+        top: 320vh;
+    }
+    .payer, .article {
+        height: 220vh;
+    }
+}
+
 @media (max-height: 155px) {
     footer {
-        top: 350vh;
+        top: 390vh;
         
     }
     .payer, .article {
-        height: 250vh;
+        height: 270vh;
     }
 }
+
